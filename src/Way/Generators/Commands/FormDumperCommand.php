@@ -58,7 +58,8 @@ class FormDumperCommand extends BaseGeneratorCommand {
         $this->generator->make(
             $model,
             $this->option('method'),
-            $this->option('html')
+            $this->option('html'),
+            $this->option('bootstrap')
         );
     }
 
