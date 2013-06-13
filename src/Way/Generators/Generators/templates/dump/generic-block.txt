@@ -1,5 +1,9 @@
 {{=<% %>=}}
     <<%element%>>
-        {{ Form::label('<%name%>', '<%label%>') }}
-        {{ Form::<%type%>('<%name%>') }}
+     <div class='control-group'>
+        {{ Form::label('<%name%>', '<%label%>',  array('class' => 'control-label')) }}
+         <div class="controls">
+		 	{{ Form::<%type%>('<%name%>', array('class' => '<%type%>)) }}
+		 </div>
+     </div>
     </<%element%>>
