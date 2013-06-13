@@ -462,6 +462,37 @@ Now, the generator we'll present the elements within `div`s!
     </div>
 {{ Form::close() }}
 ```
+#### Custom Bootstrap
+
+What if you don't like the idea of using an unordered list or just plain div tags for a form? Use the `--bootstrap` option:
+
+```bash
+php artisan generate:form tweet --bootstrap
+```
+Now, the generator we'll present the elements within `div`s!
+
+```html
+{{ Form::open(array('route' => 'tweets.store')) }}
+
+ 	<div class='control-group'>
+        {{ Form::label('author', 'Author:', array('class' => 'control-label')) }}
+         <div class="controls">
+        	{{ Form::text('author', "",array('class' => 'text')) }}
+        </div>
+     </div>
+     
+
+    <div class='control-group'>
+        {{ Form::label('body', 'Body:', array('class' => 'control-label')) }}
+         <div class="controls">
+        	{{ Form::textarea('body', "",array('class' => 'text')) }}
+        </div>
+     </div>
+
+     {{ Form::submit( "Submit",array('class' => 'btn btn-primary')) }}
+
+{{ Form::close() }}
+```
 
 #### Copying and Saving
 
