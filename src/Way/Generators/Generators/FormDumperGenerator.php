@@ -10,6 +10,7 @@ class FormDumperGenerator {
 
     /**
      * DB table info
+     * just checking
      */
     protected $tableInfo;
 
