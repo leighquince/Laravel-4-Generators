@@ -85,6 +85,7 @@ class FormDumperCommand extends BaseGeneratorCommand {
         return array(
             array('method', null, InputOption::VALUE_OPTIONAL, 'What operation are we doing? [create|edit]', 'create'),
             array('html', null, InputOption::VALUE_OPTIONAL, 'Which HTML element should be used?', 'ul')
+            array('bootstrap', null, InputOption::VALUE_OPTIONAL, 'Which bootstrap element should be used?', 'ul')
         );
     }
 
