@@ -58,14 +58,23 @@ class FormDumperGenerator {
     public function make($model, $method, $element)
     {
         $this->tableInfo = $this->getTableInfo($model);
-
-        $type = 'generic';
-        if (preg_match('/^ul|li|ol$/i', $element))
-        {
-            $element = 'li';
-            $type = 'list';
-        }
-
+		
+		
+		if($method="bootstrap")
+		{
+			$type="bootstrap";
+			$element = "";
+			
+		}else{
+        	$type = 'generic';
+        	if (preg_match('/^ul|li|ol$/i', $element))
+        	{
+            	$element = 'li';
+            	$type = 'list';
+			}	
+		
+		
+		}
         $output = $this->render($type, $method, $model, $element);
         $this->printOutput($output);
     }
