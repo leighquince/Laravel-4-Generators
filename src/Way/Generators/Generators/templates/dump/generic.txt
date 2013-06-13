@@ -3,6 +3,6 @@
 
 {{=<% %>=}}
     <<%element%>>
-        {{ Form::submit() }}
+        {{ Form::submit(array('class' => 'btn btn-primary')) }}
     </<%element%>>
 {{ Form::close() }}
