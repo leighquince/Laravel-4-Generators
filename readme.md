@@ -469,7 +469,7 @@ What if you don't like the idea of using an unordered list or just plain div tag
 ```bash
 php artisan generate:form tweet --bootstrap
 ```
-Now, the generator we'll present the elements within `div`s!
+Now, the generator we'll present the elements with bootstrap css classes!
 
 ```html
 {{ Form::open(array('route' => 'tweets.store')) }}
