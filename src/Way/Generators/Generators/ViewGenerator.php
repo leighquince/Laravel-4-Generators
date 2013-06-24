@@ -102,7 +102,7 @@ EOT;
      * Add Laravel methods, as string,
      * for the fields
      *
-     * @return string
+     * @return string				                        
      */
     public function makeFormElements()
     {
@@ -135,10 +135,12 @@ EOT;
             // Now that we have the correct $element,
             // We can build up the HTML fragment
             $frag = <<<EOT
-        <li>
+        <div class="control-group">
             {{ Form::label('$name', '$formalName:') }}
-            $element
-        </li>
+            <div class="controls">
+            	$element
+			</div>
+		</div>
 
 EOT;
 
